@@ -1,12 +1,14 @@
-![Angular](https://img.shields.io/badge/Angular-DD0031?logo=angular&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
-![SCSS](https://img.shields.io/badge/SCSS-CC6699?logo=sass&logoColor=white)
-![Angular Tests](https://img.shields.io/badge/Angular%20Tests-Jasmine%20%2B%20Karma-8A4182?logo=jasmine&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Version](https://img.shields.io/badge/Version-1.0.0-blue)
-![Last Commit](https://img.shields.io/github/last-commit/MarcosDS7/lib-linear-stepper-ng)
-![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)
-![GitHub stars](https://img.shields.io/github/stars/rodrigo-pas/uninter-devops-vai-de-retornavel?style=social)
+<p align="center">
+  <img src="https://img.shields.io/badge/Angular-DD0031?logo=angular&logoColor=white" alt="Angular"/>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/SCSS-CC6699?logo=sass&logoColor=white" alt="SCSS"/>
+  <img src="https://img.shields.io/badge/Angular%20Tests-Jasmine%20%2B%20Karma-8A4182?logo=jasmine&logoColor=white" alt="Angular Tests"/>
+  <img src="https://img.shields.io/badge/License-MIT-green" alt="License"/>
+  <img src="https://img.shields.io/badge/Version-1.0.0-blue" alt="Version"/>
+  <img src="https://img.shields.io/github/last-commit/MarcosDS7/lib-linear-stepper-ng" alt="Last Commit"/>
+  <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow" alt="Status"/>
+  <img src="https://img.shields.io/github/stars/MarcosDS7/lib-linear-stepper-ng?style=social" alt="GitHub stars"/>
+</p>
 
 <h1 align="center">LIBRARY LINEAR UP NG - STEPPER</h1>
 
