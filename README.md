@@ -1,59 +1,24 @@
-# LibLinearStepperNg
+![Angular](https://img.shields.io/badge/Angular-DD0031?logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![SCSS](https://img.shields.io/badge/SCSS-CC6699?logo=sass&logoColor=white)
+![Angular Tests](https://img.shields.io/badge/Angular%20Tests-Jasmine%20%2B%20Karma-8A4182?logo=jasmine&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Version](https://img.shields.io/badge/Version-1.0.0-blue)
+![Last Commit](https://img.shields.io/github/last-commit/MarcosDS7/lib-linear-stepper-ng)
+![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)
+![GitHub stars](https://img.shields.io/github/stars/rodrigo-pas/uninter-devops-vai-de-retornavel?style=social)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.1.
+<h1 align="center">LIBRARY LINEAR UP NG - STEPPER</h1>
 
-## Development server
+<sub align="center">`Open source Angular 20 library` providing a single-page linear stepper, perfect for forms, registrations, and interactive pages. Steps are completed progressively, unlocking the next step only when the previous one is finished, ensuring a clear and intuitive user experience. Fully customizable and easy to integrate into Angular project.</sub>
 
-To start a local development server, run:
+##
 
-```bash
-ng serve
-```
+...
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+##
 
-## Code scaffolding
+Contributors
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+[![Marcos Souza](https://img.shields.io/badge/Marcos_Souza-Author-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/marcos-souza-front-end-ui-ux-design/)
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
