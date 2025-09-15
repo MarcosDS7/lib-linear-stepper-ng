@@ -6,6 +6,11 @@
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
+    "paths": {
+      "lib-linear-stepper-ng": [
+        "./dist/lib-linear-stepper-ng"
+      ]
+    },
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
@@ -22,5 +27,13 @@
     "typeCheckHostBindings": true,
     "strictTemplates": true
   },
-  "files": []
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/lib-linear-stepper-ng/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/lib-linear-stepper-ng/tsconfig.spec.json"
+    }
+  ]
 }

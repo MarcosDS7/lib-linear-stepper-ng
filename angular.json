@@ -3,5 +3,31 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "lib-linear-stepper-ng": {
+      "projectType": "library",
+      "root": "projects/lib-linear-stepper-ng",
+      "sourceRoot": "projects/lib-linear-stepper-ng/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/lib-linear-stepper-ng/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/lib-linear-stepper-ng/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "tsConfig": "projects/lib-linear-stepper-ng/tsconfig.spec.json"
+          }
+        }
+      }
+    }
   }
 }
