@@ -1,14 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'lib-lib-linear-stepper-ng',
+  selector: 'lib-linear-stepper-ng',
   imports: [],
-  template: `
-    <p>
-      lib-linear-stepper-ng works!
-    </p>
-  `,
-  styles: ``
+  templateUrl: './lib-linear-stepper-ng.html',
+  styles: './lib-linear-stepper-ng.scss'
 })
 export class LibLinearStepperNg {
 
