@@ -1,12 +1,11 @@
-import { StepperComponent } from './../../../lib-linear-stepper-ng/src/lib/components/stepper/stepper.component';
+import { StepComponent } from './../../../lib-linear-stepper-ng/src/lib/components/step/step.component';
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, StepperComponent],
+  imports: [StepComponent],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
   protected readonly title = signal('test-application');

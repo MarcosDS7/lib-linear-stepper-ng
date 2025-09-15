@@ -1,0 +1,58 @@
+<article style="position: relative">
+  <button
+    type="button"
+    (click)="toggleContainerEmit()"
+    style="
+      background-color: #eff4fa;
+      border-radius: 6px;
+      padding: 8px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 4px;
+      width: 100%;
+    "
+  >
+    <p
+      class="font-Montserrat font-semibold text-customBlue-normal text-left"
+      style="font-weight: 600; color: #004899; text-align: left"
+    >
+      {{ title() }}
+    </p>
+
+    <div style="display: flex; align-items: center; gap: 4px">
+      <span
+        *ngIf="completed"
+        style="
+          font-size: 16px;
+          font-weight: 700;
+          color: #ffffff;
+          background-color: #004899;
+          border-radius: 6px;
+          padding: 8px 12px;
+        "
+        >Completo</span
+      >
+
+      <div [@rotatedState]="!isContainerOpen()">
+        <span>ICON</span>
+      </div>
+    </div>
+  </button>
+
+  <div
+    style="
+      position: absolute;
+      width: 100%;
+      background-color: #ffffff;
+      border-radius: 0 6px 6px 6px;
+      padding: 16px;
+      border: 1px solid #e5e5e5;
+      z-index: 1;
+      overflow: hidden;
+    "
+    [@collapse]="isContainerOpen()"
+  >
+    <ng-content></ng-content>
+  </div>
+</article>
