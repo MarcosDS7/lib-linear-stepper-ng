@@ -21,7 +21,7 @@
 
       <!-- ICON -->
       <span
-        class="icon"
+        class="icon flex"
         [class.rotated]="expanded()"
         animate.enter="rotateIn"
         animate.leave="rotateOut"
@@ -42,7 +42,7 @@
   <!-- BOX -->
   @if (expanded()) {
   <div
-    class="absolute w-full z-index-1 overflow-hidden"
+    class="absolute w-full z-1 overflow-hidden"
     animate.enter="expand"
     animate.leave="collapse"
     [ngClass]="classes().box"

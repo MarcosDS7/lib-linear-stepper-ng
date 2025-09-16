@@ -1,7 +1,7 @@
 import { StepComponent } from './../../../lib-linear-stepper-ng/src/lib/components/step/step.component';
 import { Component, signal } from '@angular/core';
 
-type StepTypes = 'register' | 'online' | null;
+type StepTypes = 'register' | 'choose-plan' | null;
 
 @Component({
   selector: 'app-root',
