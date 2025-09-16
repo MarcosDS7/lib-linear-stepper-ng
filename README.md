@@ -16,7 +16,149 @@
 
 ##
 
+#### FEATURES
+
+- Linear stepper: steps unlock sequentially;
+- Expand/collapse functionality for each step;
+- Fully customizable styling using `Tailwind-like` classes or your own `CSS`;
+- Supports any content inside steps (forms, text, components);
+- Easy integration with `Angular 20` signals and TypeScript;
+
+##
+
+#### INSTALLATION
+
+> <sub>[WARNING]</sub>  
+> <sub>The library has not been published yet. To use it, you need to **clone the project** and create an `npm link`.</sub>
+<br />
+
+1. After cloning the library, navigate to the `lib-linear-stepper-ng` folder and run the command:
+
+```
+ng build
+```
+
+2. A dist folder will be created in the root. Then, navigate to `dist/lib-linear-stepper-ng` and run the command:
+
+```
+npm link
+```
+
+3. Inside your Angular project:
+
+```
+npm link lib-linear-stepper-ng
+```
+
+##
+
+#### SETUP
+
+<sub>In your stepper setup:</sub>
+
+
+1. Import the step component:
+
+```
+import { StepComponent } from 'lib-linear-stepper-ng';
 ...
+imports: [StepComponent]
+```
+
+2. Create the `type` that will hold the names of your steps:
+
+```
+type StepTypes = 'register' | 'choose-plan' | null;
+```
+
+3. Control variable for the steps:
+
+```
+expandedStep = signal<StepTypes | null>(null);
+```
+
+4. Function that opens the selected step:
+
+```
+onToggle(step: StepTypes): void {
+  this.expandedStep.set(this.expandedStep() === step ? null : step);
+}
+```
+
+5. In your `angular.json → build → serve`, add the following code:
+
+```
+...
+"defaultConfiguration": "development", # already exists
+"options": {
+  "buildTarget": "ng:build",
+  "prebundle": {
+      "exclude": ["lib-linear-stepper-ng"]
+  }
+}
+```
+
+##
+
+#### USAGE EXEMPLE
+
+```
+<lib-linear-step-ng
+  (toggled)="onToggle('register')"
+  title="User registration"
+  [expanded]="expandedStep() === 'register'"
+  [completed]="true"
+  completedText="Completed"
+  [disabled]="false"
+  [classes]="{
+    button: 'rounded-lg border border-gray-700 bg-gray-800 px-4 py-3 text-gray-100 shadow-sm',
+    title: 'text-sm font-medium text-gray-100 text-left',
+    badge:
+      'flex items-center rounded-md bg-green-700 px-2 py-0.5 text-xs font-medium text-green-100',
+    iconHexColor: '#3b82f6',
+    box: 'mt-2 rounded-2xl border border-gray-700 bg-gray-800 px-4 py-3 text-sm text-gray-100 shadow-inner'
+  }"
+>
+  <p>< your code ></p>
+  <p>< your form ></p>
+  <p>< your idea ></p>
+</lib-linear-step-ng>
+```
+
+##
+
+#### RESULT
+
+<img width="1368" height="237" alt="image" src="https://github.com/user-attachments/assets/761d4956-d30a-4de5-9b21-e37260b81fa0" />
+
+##
+
+#### HOW IT WORKS
+
+```
+ ├── title
+ │    └── Name of the step
+ ├── completed
+ │    └── Indicates if the step has been completed. Completed steps should unlock the next step.
+ ├── disabled
+ │    └── Should be true if the previous step is not complete
+ ├── completedText
+ │    └── Text displayed in the completed badge
+ ├── expanded
+ │    └── Controls whether the step is open or closed.
+ │         The step expands when the variable matches its name.
+ ├── toggled
+ │    └── Event output to control opening and closing of steps
+ ├── classes
+ │    └── Object containing custom styles (Tailwind-like classes or your own CSS).
+ │         iconHexColor accepts only hexadecimal color.
+ └── Content
+      └── You can add any content inside a step:
+           ├── Forms
+           ├── Text
+           └── Angular components
+      Logic for advancing steps is up to you.
+```
 
 ##
 
