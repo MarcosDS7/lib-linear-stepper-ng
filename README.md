@@ -162,6 +162,11 @@ onToggle(step: StepTypes): void {
 
 ##
 
+#### VERSION
+ → _1.1.1_
+
+##
+
 Contributors
 
 [![Marcos Souza](https://img.shields.io/badge/Marcos_Souza-Author-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/marcos-souza-front-end-ui-ux-design/)

@@ -1,0 +1,11 @@
+<lib-step-header-ng
+  (toggled)="onToggle()"
+  [title]="title()"
+  [expanded]="expanded()"
+  [completed]="completed()"
+  [completedText]="completedText()"
+  [disabled]="disabled()"
+  [classes]="classes()"
+>
+  <ng-content></ng-content>
+</lib-step-header-ng>

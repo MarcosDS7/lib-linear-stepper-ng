@@ -1,0 +1,53 @@
+<article class="relative">
+  <!-- BUTTON -->
+  <button
+    class="flex items-center gap-1 w-full justify-between"
+    type="button"
+    (click)="onToggle()"
+    [ngClass]="classes().button"
+  >
+    <!-- TITLE -->
+    <p class="text-left" [ngClass]="classes().title">
+      {{ title() }}
+    </p>
+
+    <div class="flex items-center gap-1">
+      <!-- BADGE -->
+      @if (completed()) {
+      <span [ngClass]="classes().badge">
+        {{ completedText() }}
+      </span>
+      }
+
+      <!-- ICON -->
+      <span
+        class="icon flex"
+        [class.rotated]="expanded()"
+        animate.enter="rotateIn"
+        animate.leave="rotateOut"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24px"
+          viewBox="0 -960 960 960"
+          width="24px"
+          [attr.fill]="classes().iconHexColor"
+        >
+          <path d="m225-377 255-255 255 255H225Z" />
+        </svg>
+      </span>
+    </div>
+  </button>
+
+  <!-- BOX -->
+  @if (expanded()) {
+  <div
+    class="absolute w-full z-1 overflow-hidden"
+    animate.enter="expand"
+    animate.leave="collapse"
+    [ngClass]="classes().box"
+  >
+    <ng-content></ng-content>
+  </div>
+  }
+</article>
