@@ -1,37 +1,20 @@
-<article style="position: relative">
+<article class="relative">
+  <!-- BUTTON -->
   <button
+    class="flex items-center gap-1 w-full justify-between"
     type="button"
     (click)="onToggle()"
-    style="
-      background-color: #eff4fa;
-      border-radius: 6px;
-      padding: 8px 12px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 4px;
-      width: 100%;
-    "
+    [ngClass]="classes().button"
   >
-    <p
-      class="font-Montserrat font-semibold text-customBlue-normal text-left"
-      style="font-weight: 600; color: #004899; text-align: left"
-    >
+    <!-- TITLE -->
+    <p class="text-left" [ngClass]="classes().title">
       {{ title() }}
     </p>
 
-    <div style="display: flex; align-items: center; gap: 4px">
+    <div class="flex items-center gap-1">
+      <!-- BADGE -->
       @if (completed()) {
-      <span
-        style="
-          font-size: 16px;
-          font-weight: 700;
-          color: #ffffff;
-          background-color: #004899;
-          border-radius: 6px;
-          padding: 8px 12px;
-        "
-      >
+      <span [ngClass]="classes().badge">
         {{ completedText() }}
       </span>
       }
@@ -48,22 +31,13 @@
     </div>
   </button>
 
-  <!-- Conteúdo expansível -->
+  <!-- BOX -->
   @if (expanded()) {
   <div
-    class="collapse-box"
+    class="absolute w-full z-index-1 overflow-hidden"
     animate.enter="expand"
     animate.leave="collapse"
-    style="
-      position: absolute;
-      width: 100%;
-      background-color: #ffffff;
-      border-radius: 0 6px 6px 6px;
-      padding: 16px;
-      border: 1px solid #e5e5e5;
-      z-index: 1;
-      overflow: hidden;
-    "
+    [ngClass]="classes().box"
   >
     <ng-content></ng-content>
   </div>

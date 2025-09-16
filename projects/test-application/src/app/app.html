@@ -1,10 +1,18 @@
 <lib-linear-step-ng
   (toggled)="onToggle('register')"
-  title="Cadastro de usuário"
+  title="Cadastro de usuários"
   [expanded]="expandedStep === 'register'"
   [completed]="false"
-  completedText="Concluído"
+  completedText="Copmleto"
   [disabled]="false"
+  [classes]="{
+    button: '...',
+    title: '...',
+    badge: '...',
+    icon: '...',
+    box: '...'
+  }"
 >
-  Hello Worl
+  Hello world
 </lib-linear-step-ng>
+

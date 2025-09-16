@@ -1,12 +1,70 @@
-/* Rotação do ícone */
+/* =========================
+   Position
+========================= */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+/* =========================
+   Flexbox Layout
+========================= */
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.gap-1 {
+  gap: 0.25rem; /* 4px */
+}
+
+/* =========================
+   Text
+========================= */
+.text-left {
+  text-align: left;
+}
+
+/* =========================
+   Overflow
+========================= */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* =========================
+   Rotating Icon
+========================= */
 .icon {
   display: inline-block;
   transition: transform 0.3s ease-in-out;
 }
+
 .icon.rotated {
   transform: rotate(-180deg);
 }
 
+/* =========================
+   Animations
+========================= */
 @keyframes rotateIn {
   from {
     transform: rotate(0deg);
@@ -25,7 +83,7 @@
   }
 }
 
-/* Collapse */
+/* Expand/Collapse */
 @keyframes expand {
   from {
     height: 0;

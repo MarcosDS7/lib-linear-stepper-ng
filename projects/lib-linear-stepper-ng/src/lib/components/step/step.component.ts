@@ -1,5 +1,6 @@
 import { Component, input, output } from '@angular/core';
 import { StepHeaderComponent } from '../step-header/step-header.component';
+import { StepClasses } from '../../interfaces/step.interface';
 
 @Component({
   selector: 'lib-linear-step-ng',
@@ -14,6 +15,8 @@ export class StepComponent {
   completed = input.required<boolean>();
   completedText = input.required<string>();
   disabled = input.required<boolean>();
+
+  classes = input.required<StepClasses>({});
 
   onToggle(): void {
     this.toggled.emit();
