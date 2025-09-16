@@ -10,10 +10,9 @@ type StepTypes = 'register' | 'online' | null;
   styleUrl: './app.scss',
 })
 export class App {
-  protected readonly title = signal('test-application');
-  expandedStep: StepTypes = null;
+  expandedStep = signal<StepTypes | null>(null);
   
   onToggle(step: StepTypes): void {
-    this.expandedStep = this.expandedStep === step ? null : step;
+    this.expandedStep.set(this.expandedStep() === step ? null : step);
   }
 }

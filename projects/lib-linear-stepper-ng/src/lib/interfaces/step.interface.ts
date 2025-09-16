@@ -2,6 +2,6 @@ export interface StepClasses {
   button: string;
   title: string;
   badge: string;
-  icon: string;
+  iconHexColor: string;
   box: string;
 }

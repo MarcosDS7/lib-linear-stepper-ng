@@ -19,14 +19,22 @@
       </span>
       }
 
-      <!-- Ícone rotacionando -->
+      <!-- ICON -->
       <span
         class="icon"
         [class.rotated]="expanded()"
         animate.enter="rotateIn"
         animate.leave="rotateOut"
       >
-        ICON
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24px"
+          viewBox="0 -960 960 960"
+          width="24px"
+          [attr.fill]="classes().iconHexColor" 
+        >
+          <path d="m225-377 255-255 255 255H225Z" />
+        </svg>
       </span>
     </div>
   </button>

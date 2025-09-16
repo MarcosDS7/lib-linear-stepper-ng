@@ -1,7 +1,7 @@
 <lib-linear-step-ng
   (toggled)="onToggle('register')"
   title="Cadastro de usuários"
-  [expanded]="expandedStep === 'register'"
+  [expanded]="expandedStep() === 'register'"
   [completed]="false"
   completedText="Copmleto"
   [disabled]="false"
@@ -9,7 +9,7 @@
     button: '...',
     title: '...',
     badge: '...',
-    icon: '...',
+    iconHexColor: '...',
     box: '...'
   }"
 >
