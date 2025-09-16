@@ -10,6 +10,7 @@ export class StepHeaderComponent {
   title = input.required<string>();
   expanded = input.required<boolean>();
   completed = input.required<boolean>();
+  completedText = input.required<string>();
   disabled = input.required<boolean>();
 
   onToggle(): void {
