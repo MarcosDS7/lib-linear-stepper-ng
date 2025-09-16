@@ -1,13 +1,11 @@
 import { Component, input, output } from '@angular/core';
-import { StepHeaderComponent } from '../step-header/step-header.component';
 
 @Component({
-  selector: 'lib-linear-step-ng',
-  imports: [StepHeaderComponent],
-  templateUrl: './step.component.html',
-  styleUrl: './step.component.scss',
+  selector: 'lib-step-header-ng',
+  templateUrl: './step-header.component.html',
+  styleUrl: './step-header.component.scss',
 })
-export class StepComponent {
+export class StepHeaderComponent {
   toggled = output();
   title = input.required<string>();
   expanded = input.required<boolean>();
@@ -15,6 +13,8 @@ export class StepComponent {
   disabled = input.required<boolean>();
 
   onToggle(): void {
+    if (this.disabled()) return;
+
     this.toggled.emit();
   }
 }

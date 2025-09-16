@@ -1,3 +1,9 @@
-<lib-step-container-ng title="Olá" [isContainerOpen]="true" [completed]="false" [disabled]="false">
+<lib-step-header-ng
+  (toggled)="onToggle()"
+  [title]="title()"
+  [expanded]="expanded()"
+  [completed]="completed()"
+  [disabled]="disabled()"
+>
   <ng-content></ng-content>
-</lib-step-container-ng>
+</lib-step-header-ng>

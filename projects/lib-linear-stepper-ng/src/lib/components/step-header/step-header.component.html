@@ -1,7 +1,7 @@
 <article style="position: relative">
   <button
     type="button"
-    (click)="toggleContainerEmit()"
+    (click)="onToggle()"
     style="
       background-color: #eff4fa;
       border-radius: 6px;
@@ -21,8 +21,8 @@
     </p>
 
     <div style="display: flex; align-items: center; gap: 4px">
+      @if (completed()) {
       <span
-        *ngIf="completed"
         style="
           font-size: 16px;
           font-weight: 700;
@@ -31,16 +31,29 @@
           border-radius: 6px;
           padding: 8px 12px;
         "
-        >Completo</span
       >
+        Completo
+      </span>
+      }
 
-      <div [@rotatedState]="!isContainerOpen()">
-        <span>ICON</span>
-      </div>
+      <!-- Ícone rotacionando -->
+      <span
+        class="icon"
+        [class.rotated]="expanded()"
+        animate.enter="rotateIn"
+        animate.leave="rotateOut"
+      >
+        ICON
+      </span>
     </div>
   </button>
 
+  <!-- Conteúdo expansível -->
+  @if (expanded()) {
   <div
+    class="collapse-box"
+    animate.enter="expand"
+    animate.leave="collapse"
     style="
       position: absolute;
       width: 100%;
@@ -51,8 +64,8 @@
       z-index: 1;
       overflow: hidden;
     "
-    [@collapse]="isContainerOpen()"
   >
     <ng-content></ng-content>
   </div>
+  }
 </article>

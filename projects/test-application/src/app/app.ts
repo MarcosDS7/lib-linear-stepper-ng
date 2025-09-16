@@ -1,6 +1,7 @@
-import { ControlDropdownContainerType } from './../../../lib-linear-stepper-ng/src/lib/types/step.type';
 import { StepComponent } from './../../../lib-linear-stepper-ng/src/lib/components/step/step.component';
 import { Component, signal } from '@angular/core';
+
+type StepTypes = 'register' | null;
 
 @Component({
   selector: 'app-root',
@@ -10,10 +11,9 @@ import { Component, signal } from '@angular/core';
 })
 export class App {
   protected readonly title = signal('test-application');
-  controlContainer: ControlDropdownContainerType = null;
+  expandedStep: StepTypes = null;
 
-
-  toggleDropdown(step: ControlDropdownContainerType): void {
-    this.controlContainer = this.controlContainer === step ? null : step;
+  onToggle(step: StepTypes): void {
+    this.expandedStep = this.expandedStep === step ? null : step;
   }
 }

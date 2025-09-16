@@ -1,9 +1,9 @@
-<lib-linear-step-item-ng
+<lib-linear-step-ng
+  (toggled)="onToggle('register')"
   title="Cadastro de usuário"
-  [isContainerOpen]="controlContainer === 'register'"
+  [expanded]="expandedStep === 'register'"
   [completed]="false"
   [disabled]="false"
-  (toggleContainer)="toggleDropdown('register')"
 >
   Hello Worl
-</lib-linear-step-item-ng>
+</lib-linear-step-ng>
