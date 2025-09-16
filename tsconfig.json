@@ -35,11 +35,5 @@
     {
       "path": "./projects/lib-linear-stepper-ng/tsconfig.spec.json"
     },
-    {
-      "path": "./projects/test-application/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/test-application/tsconfig.spec.json"
-    }
   ]
 }
