@@ -1,3 +1,9 @@
-<lib-linear-step-item-ng>
-    Hello Worl
+<lib-linear-step-item-ng
+  title="Cadastro de usuário"
+  [isContainerOpen]="controlContainer === 'register'"
+  [completed]="false"
+  [disabled]="false"
+  (toggleContainer)="toggleDropdown('register')"
+>
+  Hello Worl
 </lib-linear-step-item-ng>
